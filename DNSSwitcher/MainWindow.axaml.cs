@@ -171,7 +171,7 @@ public partial class MainWindow : Window
     private void Dns1Tb_OnPropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
     {
         if (_custom)
-            _selectedDns.Dns1 = Dns2Tb.Text;
+            _selectedDns.Dns1 = Dns1Tb.Text;
     }
 
     private void Dns2Tb_OnPropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
