@@ -1,8 +1,6 @@
 # DNSSwitcher
 An app that allows you to easily switch between dns servers
-
-
-
+(Please dont look at my code its really bad)
 
 
 
