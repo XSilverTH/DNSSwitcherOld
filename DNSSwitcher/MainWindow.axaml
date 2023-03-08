@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="280"
+        Height="280" Width="400"
+        x:Class="DNSSwitcher.MainWindow"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True"
+        Title="DNSSwitcher">
+
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.45" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+        <Grid>
+            <!--Button Name="SettingsB" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="40" Content="Settings" /-->
+            <ComboBox Name="DnsListCb" Margin="40" SelectionChanged="DnsListCb_OnSelectionChanged" />
+            <Label Name="Dns1PrefixL" HorizontalAlignment="Left" Margin="40,100" Content="Dns1:" />
+            <Label Name="Dns1L" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80, 100" />
+            <TextBox Name="Dns1Tb" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,95" IsVisible="False"
+                     PropertyChanged="Dns1Tb_OnPropertyChanged" />
+            <Label Name="Dns2PrefixL" HorizontalAlignment="Left" Margin="40,130" Content="Dns2:" />
+            <Label Name="Dns2L" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80, 130" />
+            <TextBox Name="Dns2Tb" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,125" IsVisible="False"
+                     PropertyChanged="Dns2Tb_OnPropertyChanged" />
+            <Button Name="GetDDnsB" Content="Get default DNSs" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                    Margin="40" Click="GetDDnsB_OnClick" />
+            <!--Button Name="OpenApp" VerticalAlignment="Bottom" Margin="40" Content="Open App" /-->
+            <Button Name="SetDnsB" Content="Set DNS" HorizontalAlignment="Right" Margin="40" Click="SetDnsB_OnClick" />
+            <Button Name="DnsActionB" Content="Remove from list" VerticalAlignment="Bottom" Margin="40,90"
+                    Click="DnsActionB_OnClick" />
+            <TextBox Name="DnsActionWTb" Watermark="Name" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                     Margin="40, 90" IsVisible="False" />
+            <Button Name="DnsActionWB" Content="Add" VerticalAlignment="Bottom" Margin="170, 90" IsVisible="False"
+                    Click="DnsActionWB_OnClick" />
+            <Button Name="ResetDnsB" Content="Reset DNS" VerticalAlignment="Center" HorizontalAlignment="Right"
+                    Margin="0,0,40,70" Click="ResetDnsB_OnClick" />
+            <Label Name="StatusL" Content="Loading..." VerticalAlignment="Bottom" Margin="10" FontSize="12" />
+        </Grid>
+    </Panel>
+
+</Window>
