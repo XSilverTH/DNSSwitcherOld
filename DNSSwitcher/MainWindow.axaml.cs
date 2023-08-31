@@ -188,7 +188,7 @@ public partial class MainWindow : Window
         try
         {
             _dnsList = httpClient
-                .GetFromJsonAsync<List<Dns>>("http://xsilverth.freehost.io/AppsData/DNSSwitcher/DnsList.json").Result;
+                .GetFromJsonAsync<List<Dns>>("https://raw.githubusercontent.com/XSilverTH/DNSSwitcher/main/DnsList.json").Result;
         }
         catch (Exception ex)
         {
